@@ -10,11 +10,11 @@
 
 ### Screenshot
 
-![](./img/screenshot1.jpg)
+![](./img/screenshot1.png)
 
-![](./img/screenshot2.jpg)
+![](./img/screenshot2.png)
 
-![](./img/screenshot3.jpg)
+![](./img/screenshot3.png)
 
 
 ### Links
