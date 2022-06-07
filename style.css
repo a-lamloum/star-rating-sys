@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    background-color: black;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    background-color: #111;
+    border-radius: 5px;
+    border: 1px solid #444;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container .post {
+    display: none;
+}
+
+.container .text {
+    font-size: 25px;
+    color: #666;
+    font-weight: 500;
+}
+.container .edit {
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.container .edit:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* widget style  */
+
+.container .star__widget input {
+    display: none;
+}
+
+.star__widget label{
+    color: #444;
+    font-size: 40px;
+    padding: 10px;
+    float: right;
+    transition: all 0.3s ease;
+}
+
+.star__widget input:not(:checked)  ~ label:hover,
+.star__widget input:not(:checked)  ~ label:hover ~ label {
+    color: #fd4;
+    cursor: pointer;
+}
+
+input:checked ~ label {
+    color: #fd4;
+}
+
+
+/* 5 stars glow effect  */
+input#rate-5:checked ~ label {
+    color: #fe7;
+    text-shadow: 0 0 20px #952;
+}
+
+/* header area  */
+#rate-1:checked ~ form header::before {
+    content: "I hate it 😠";
+}
+#rate-2:checked ~ form header::before {
+    content: "I don't like it 😒";
+}
+#rate-3:checked ~ form header::before {
+    content: "It is awesome 😀";
+}
+#rate-4:checked ~ form header::before {
+    content: "I just like it 😎";
+}
+#rate-5:checked ~ form header::before {
+    content: "I just love it 😍";
+}
+
+ /* display form  */
+
+ .container form {
+     display: none;     
+ }
+
+ input:checked ~ form {
+     display: block;
+ }
+form header {
+    display: inline-block;
+    width: 100%;
+    font-size: 25px;
+    color: #fe7;
+    font-weight: 500;
+    margin: 5px 0 20px 0; 
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* form input && button  */
+
+form .textarea {
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+
+form .textarea textarea {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #eee;
+    border: 1px solid #333;
+    background: #222;
+    font-size: 16px;
+    padding: 10px;
+    resize: none;
+    border-radius: 5px;
+}
+
+form .btn {
+    height: 45px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+form .btn button{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #222;
+    color: #999;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease
+}
+form .btn button:hover {
+    background-color: #1b1b1b;
+}
